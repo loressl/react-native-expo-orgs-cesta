@@ -1,4 +1,4 @@
-import { SafeAreaView, StatusBar, View } from 'react-native';
+import { SafeAreaView, StatusBar, View, Text } from 'react-native';
 import { Basket } from './src/screens/Basket';
 import { 
   useFonts, 
@@ -14,7 +14,7 @@ export default function App() {
 
   if(!fontLoading) {
     return (
-      <View>Carregando...</View>
+      <View><Text>Carregando...</Text></View>
     )
   }
 

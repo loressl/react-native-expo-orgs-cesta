@@ -1,4 +1,5 @@
-import { Image, StyleSheet, Dimensions, Text, View } from "react-native";
+import { Image, StyleSheet, Dimensions, View } from "react-native";
+import { TextComponent } from '../components/Text'
 
 import imageTop from '../../assets/topo.png'
 import logo from '../../assets/logo.png'
@@ -6,31 +7,42 @@ import logo from '../../assets/logo.png'
 const width = Dimensions.get('screen').width
 
 export function Basket() {
-    return(
+    return (
         <>
             <Image source={imageTop} style={styles.imageTop} />
-            <Text style={styles.title}>Detalhe da cesta</Text>
+            <TextComponent
+                text="Detalhe da cesta"
+                newStyles={styles.title}
+            />
 
             <View style={styles.basket}>
-                <Text style={styles.name}>Cesta de Verduras</Text>
+                <TextComponent
+                    text="Cesta de Verduras"
+                    newStyles={styles.name}
+                />
                 <View style={styles.farm}>
                     <Image style={styles.imageFarm} source={logo} />
-                    <Text style={styles.nameFarm}>Jenny Jack Farm</Text>
+                    <TextComponent
+                        text="Jenny Jack Farm"
+                        newStyles={styles.nameFarm}
+                    />
                 </View>
-                <Text style={styles.description}>
-                    Uma cesta com produtos selecionados 
-                    cuidadosamente da fazenda direto para sua cozina
-                </Text>
-                <Text style={styles.price}>
-                    R$ 40,00
-                </Text>
+                <TextComponent
+                    text="Uma cesta com produtos selecionados 
+                    cuidadosamente da fazenda direto para sua cozina"
+                    newStyles={styles.description}
+                />
+                <TextComponent
+                    text="R$ 40,00"
+                    newStyles={styles.price}
+                />
             </View>
         </>
     )
 }
 
 const styles = StyleSheet.create({
-    imageTop:{
+    imageTop: {
         width: "100%",
         height: 578 / 768 * width,
     },
@@ -40,12 +52,12 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 16,
         lineHeight: 26,
-        color:'white',
+        color: 'white',
         marginTop: '5%',
         fontWeight: 'bold',
         padding: 16
     },
-    basket:{
+    basket: {
         paddingVertical: 8,
         paddingHorizontal: 16
     },
@@ -53,21 +65,20 @@ const styles = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         color: "#464646",
-        fontFamily: 'MontSerratBold'
+        fontWeight: "bold"
     },
     farm: {
         flexDirection: 'row',
         paddingVertical: 12
     },
-    imageFarm:{
+    imageFarm: {
         width: 32,
         height: 32
     },
     nameFarm: {
         fontSize: 16,
         lineHeight: 26,
-        marginLeft: 12,
-        fontFamily: 'MontSerratRegular'
+        marginLeft: 12
     },
     description: {
         color: '#a3a3a3',
