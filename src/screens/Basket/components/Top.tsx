@@ -5,12 +5,16 @@ import imageTop from '../../../../assets/topo.png'
 
 const width = Dimensions.get('screen').width
 
-export function Top() {
+interface TopProps {
+    title: string
+}
+
+export function Top({title}: TopProps) {
     return (
         <>
             <Image source={imageTop} style={styles.imageTop} />
             <TextComponent
-                text="Detalhe da cesta"
+                text={title}
                 newStyles={styles.title}
             />
         </>

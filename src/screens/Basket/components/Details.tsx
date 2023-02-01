@@ -1,29 +1,34 @@
 import { View, Image, StyleSheet } from "react-native";
 import { TextComponent } from "../../../components/Text";
 
-import logo from '../../../../assets/logo.png'
+interface DetailsProps {
+    name: string
+    farmLogo: any
+    farmName: string
+    description: string
+    price: string
+}
 
-export function Details() {
+export function Details({name, farmLogo, farmName, description, price}: DetailsProps) {
     return (
         <>
             <TextComponent
-                text="Cesta de Verduras"
+                text={name}
                 newStyles={styles.name}
             />
             <View style={styles.farm}>
-                <Image style={styles.imageFarm} source={logo} />
+                <Image style={styles.imageFarm} source={farmLogo} />
                 <TextComponent
-                    text="Jenny Jack Farm"
+                    text={farmName}
                     newStyles={styles.nameFarm}
                 />
             </View>
             <TextComponent
-                text="Uma cesta com produtos selecionados 
-                    cuidadosamente da fazenda direto para sua cozina"
+                text={description}
                 newStyles={styles.description}
             />
             <TextComponent
-                text="R$ 40,00"
+                text={price}
                 newStyles={styles.price}
             />
         </>

@@ -3,13 +3,26 @@ import { Top } from "./components/Top";
 
 import { Details } from "./components/Details";
 
-export function Basket() {
+interface BasketProps{
+    top: {
+        title: string
+    },
+    details: {
+        name: string
+        farmLogo: any
+        farmName: string
+        description: string
+        price: string
+    }
+}
+
+export function Basket({top, details}: BasketProps) {
     return (
         <>
-            <Top />
+            <Top {...top} />
 
             <View style={styles.basket}>
-                <Details />
+                <Details {...details} />
             </View>
         </>
     )
