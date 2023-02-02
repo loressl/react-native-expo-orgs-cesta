@@ -41,7 +41,8 @@ export default function App() {
 
 
   return (
-    <SafeAreaView onLayout={onLayoutRootView}>
+    <SafeAreaView onLayout={onLayoutRootView} style={{flex: 1}}>
+      {/* o flex 1 faz com que apenas os itens visíveis sejam carregados e ocupa 100% da tela */}
       <StatusBar />
       <Basket {...mock} />
     </SafeAreaView>
