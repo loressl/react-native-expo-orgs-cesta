@@ -1,5 +1,5 @@
 import { View, Image, StyleSheet } from "react-native";
-import { TextComponent } from "../../../components/Text";
+import  {TextComponent, ButtonComponent} from '../../../components'
 
 interface DetailsProps {
     name: string
@@ -7,30 +7,21 @@ interface DetailsProps {
     farmName: string
     description: string
     price: string
+    button: string
 }
 
-export function Details({name, farmLogo, farmName, description, price}: DetailsProps) {
+export function Details({name, farmLogo, farmName, description, price, button}: DetailsProps) {
     return (
         <>
-            <TextComponent
-                text={name}
-                newStyles={styles.name}
-            />
+            <TextComponent text={name} newStyles={styles.name} />
             <View style={styles.farm}>
                 <Image style={styles.imageFarm} source={farmLogo} />
-                <TextComponent
-                    text={farmName}
-                    newStyles={styles.nameFarm}
-                />
+                <TextComponent text={farmName} newStyles={styles.nameFarm} />
             </View>
-            <TextComponent
-                text={description}
-                newStyles={styles.description}
-            />
-            <TextComponent
-                text={price}
-                newStyles={styles.price}
-            />
+            <TextComponent text={description} newStyles={styles.description} />
+            <TextComponent text={price} newStyles={styles.price} />
+
+            <ButtonComponent newStyles={styles.button} title={button} onPressButton={()=>{}} />
         </>
     )
 }
@@ -66,5 +57,11 @@ const styles = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8
-    }
+    },
+    button: {
+        marginTop: 16,
+        backgroundColor: "#2a9f85",
+        paddingVertical: 16,
+        borderRadius: 6
+    },
 })
