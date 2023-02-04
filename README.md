@@ -6,6 +6,15 @@ Projeto construído durante o curso de [React Native: Criando um APP](https://cu
 ### 🛠 Tecnologias
 
 - [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+
+### Executar projeto
+
+> OBS: É necessário ter o aplicativo do expo no celular ou emulador.
+
+```bash
+yarn start
+```
 
 ### Screen
 
