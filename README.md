@@ -1,7 +1,11 @@
-<img width="100" alt="ignit" src="assets/icon.png" />
+<h1 align="center">
+<img width="200" alt="ignit" src="assets/icon.png" />
+</h1>
 
-### ORGS CESTA
-Projeto construído durante o curso de [React Native: Criando um APP](https://cursos.alura.com.br/course/react-native-comecando-zero) na plataforma ALURA. 
+<h1 align="center">ORGS CESTA</h1>
+Projeto construído no curso:  
+
+ - [React Native: Criando um APP](https://www.alura.com.br/curso-online-react-native-comecando-zero)
 
 ### 🛠 Tecnologias
 
